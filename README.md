@@ -21,19 +21,20 @@ As the project evolves, update this README so it reflects the actual purpose, ar
 
 ## Current Status
 
-The repository is currently in an early bootstrap state with minimal tracked content.
+The repository now has a cleaner top-level layout so active apps, research content, and archived material are separated.
 
-## Suggested Project Structure
-
-You may want to organize the repository like this as it grows:
+## Repository Structure
 
 ```text
 bob-sec/
-├── docs/           # Design notes, writeups, and reference material
-├── scripts/        # Utility scripts and automation
-├── tools/          # Standalone tools or small apps
-├── tests/          # Test coverage for scripts and tools
-└── README.md       # Project overview and usage
+├── apps/
+│   ├── bob-dashboard-ui/   # Next.js dashboard project
+│   └── wizard-sanctum/     # Next.js app prototype
+├── research/
+│   └── cve-tldr/           # CVE summary notes
+├── archive/
+│   └── dep-modernizer-ui/  # Archived generated UI/build output snapshot
+└── README.md
 ```
 
 ## Features
