@@ -4,6 +4,10 @@
 
 At the moment, this repository is a clean scaffold. This README provides a solid starting point so the project can grow with a clear structure and purpose.
 
+## Verification Note
+
+This README was updated from the OpenClaw engineer workspace to verify clone, edit, commit, and push workflow access.
+
 ## Overview
 
 This repository is designed for:
