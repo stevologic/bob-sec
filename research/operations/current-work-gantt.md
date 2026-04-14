@@ -18,7 +18,7 @@ gantt
 
     section Engineering
     OpenClaw config backup baseline             :backup, 2026-04-14, 4d
-    Repo normalization cleanup                  :repo, 2026-04-13, 2d
+    Legacy app removal and clean apps reset     :repo, 2026-04-13, 2d
 
     section Ongoing daily operations
     CVE Daily News Feed                         :crit, cvefeed, 2026-04-13, 7d
@@ -31,5 +31,6 @@ gantt
 - `bob-sec#2` supports the enterprise security pipeline design track.
 - `bob-sec#3` supports the OpenClaw config backup track.
 - `bob-sec#4` supports the Chiefs daily digest workflow.
+- `bob-sec#5` tracks removing legacy app directories and resetting `apps/` to a clean baseline.
 - Daily automations are already live; the chart treats them as ongoing operational lanes over the next week.
 - Dates beyond approved deadlines are manager planning estimates and should be refined as Analyst and Engineer close the next cycle of work.
