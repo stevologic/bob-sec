@@ -14,6 +14,7 @@ Now,bob-sec#2 Pipeline Research Brief v1,1
 Now,bob-sec#20 Dashboard V2 Live Refresh and Integrations,1
 Next,bob-sec#4 Chiefs Daily Digest,1
 Next,bob-sec#6 Southwest Weekly Brief,1
+Standing,bob-sec#21 4-hour execution loop and heartbeat,1
 Standing,bob-sec#7 Repo Health and Enhancement Sweep,1
 Standing,bob-sec#8 OpenClaw Cluster SRE Lane,1
 Standing,bob-sec#9 Track 2 Maintenance Lane,1
@@ -32,9 +33,10 @@ Standing,bob-sec#9 Track 2 Maintenance Lane,1
 4. `bob-sec#20`
 5. `bob-sec#4`
 6. `bob-sec#6`
-7. `bob-sec#7` through `#9`
+7. `bob-sec#21`
+8. `bob-sec#7` through `#9`
 
 ## Queue Summary
 - **Now**: `#15`, `#16`, `#17`, `#18`, `#19`, `#1`, `#2`, `#20`
 - **Next**: `#4`, `#6`
-- **Standing**: `#7`, `#8`, `#9`
+- **Standing**: `#21`, `#7`, `#8`, `#9`
