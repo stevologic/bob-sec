@@ -12,6 +12,8 @@ Now,bob-sec#19 Templates and Checklists,1
 Now,bob-sec#1 Mitigation Trend Shortlist v1,1
 Now,bob-sec#2 Pipeline Research Brief v1,1
 Now,bob-sec#20 Dashboard V2 Live Refresh and Integrations,1
+Now,bob-sec#22 Dashboard V2 Analyst Research Packet,1
+Next,bob-sec#23 Dashboard V2 Engineer Implementation and Canvas Layer,1
 Next,bob-sec#4 Chiefs Daily Digest,1
 Next,bob-sec#6 Southwest Weekly Brief,1
 Standing,bob-sec#21 4-hour execution loop and heartbeat,1
@@ -37,6 +39,6 @@ Standing,bob-sec#9 Track 2 Maintenance Lane,1
 8. `bob-sec#7` through `#9`
 
 ## Queue Summary
-- **Now**: `#15`, `#16`, `#17`, `#18`, `#19`, `#1`, `#2`, `#20`
-- **Next**: `#4`, `#6`
+- **Now**: `#15`, `#16`, `#17`, `#18`, `#19`, `#1`, `#2`, `#20`, `#22`
+- **Next**: `#23`, `#4`, `#6`
 - **Standing**: `#21`, `#7`, `#8`, `#9`
