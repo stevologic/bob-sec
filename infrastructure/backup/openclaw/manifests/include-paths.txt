@@ -1,0 +1,23 @@
+# Paths are relative to ~/.openclaw
+openclaw.json
+cron/jobs.json
+workspace/AGENTS.md
+workspace/BOOTSTRAP.md
+workspace/HEARTBEAT.md
+workspace/IDENTITY.md
+workspace/SOUL.md
+workspace/TOOLS.md
+workspace/USER.md
+workspace/memory
+workspace/scripts
+workspace/team-shared
+workspace/analyst
+workspace/director
+workspace/manager
+workspace/engineer
+workspace/bob-sec/engineer
+agents/analyst/agent/models.json
+agents/director/agent/models.json
+agents/engineer/agent/models.json
+agents/main/agent/models.json
+agents/manager/agent/models.json
