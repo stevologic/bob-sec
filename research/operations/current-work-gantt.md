@@ -1,36 +1,39 @@
 # Current Work Gantt
 
-Manager view as of 2026-04-13.
+Manager view as of 2026-04-13 MST.
 
-```mermaid
-gantt
-    title Current Work Gantt (2026-04-13 snapshot)
-    dateFormat  YYYY-MM-DD
-    axisFormat  %m/%d
+## Condensed Timeline
 
-    section Coordination
-    Security research operating model setup     :active, opmodel, 2026-04-13, 2d
-    Chiefs info division implementation         :chiefs, after opmodel, 2d
+Legend:
+- `█` active now
+- `▒` queued next
+- `▓` standing / recurring lane
+- `!` critical path pressure
 
-    section Research briefs
-    Vulnerability mitigation shortlist          :mitigation, 2026-04-14, 3d
-    Enterprise pipeline research brief          :pipeline, 2026-04-14, 3d
+| Workstream / Issue | Owner | Now (0 to 1h) | Next (1 to 6h) | Then (6 to 24h) | Standing | Notes |
+|---|---|---:|---:|---:|---:|---|
+| `bob-sec#5` Repo Normalization Cleanup | Engineer | █ ! | █ ! |  |  | Must land cleanly before more repo-backed Engineer work |
+| `bob-sec#1` Mitigation Trend Shortlist v1 | Analyst | █ ! | █ |  |  | Needs decision-ready refinement fast |
+| `bob-sec#2` Pipeline Research Brief v1 | Analyst | █ ! | █ |  |  | Needs decision-ready refinement fast |
+| `bob-sec#11` Dashboard V1 Spec / Acceptance | Manager | █ ! | █ |  |  | Locks scope for dashboard build |
+| `bob-sec#12` Dashboard V1 Analyst Packet | Analyst | █ ! | █ |  |  | Schema, sources, seeded sample |
+| `bob-sec#13` Dashboard V1 Build | Engineer | ▒ | █ ! | █ |  | Fresh app, Docker-runnable, read-only |
+| `bob-sec#3` OpenClaw Backup Baseline | Engineer | ▒ | █ ! | █ |  | Starts immediately after `#5` is safe |
+| `bob-sec#6` Southwest Weekly Brief | Manager / Analyst | ▒ | █ | █ ! |  | Nearest fixed delivery target |
+| `bob-sec#4` Chiefs Daily Digest | Analyst | ▒ | █ | █ | ▓ | Feed-only lane |
+| `bob-sec#8` OpenClaw Cluster SRE Lane | Engineer |  |  |  | ▓ | Read-first maintenance lane |
+| `bob-sec#7` Repo Health / Enhancement Sweep | Engineer |  | ▒ | ▒ | ▓ | Idle-cycle improvement lane |
+| `bob-sec#9` Track 2 Maintenance Lane | Analyst |  | ▒ | █ | ▓ | Recurring pipeline reference upkeep |
 
-    section Engineering
-    OpenClaw config backup baseline             :backup, 2026-04-14, 4d
-    Legacy app removal and clean apps reset     :repo, 2026-04-13, 2d
+## Critical Path
+1. `bob-sec#5`
+2. `bob-sec#1`
+3. `bob-sec#2`
+4. `bob-sec#11` and `#12`
+5. `bob-sec#13`
+6. `bob-sec#3`
 
-    section Ongoing daily operations
-    CVE Daily News Feed                         :crit, cvefeed, 2026-04-13, 7d
-    CVE TLDR Repo Maintenance                   :repoops, 2026-04-13, 7d
-    Daily Musical Artist                        :music, 2026-04-13, 7d
-```
-
-## Notes
-- `bob-sec#1` supports the vulnerability mitigation research track.
-- `bob-sec#2` supports the enterprise security pipeline design track.
-- `bob-sec#3` supports the OpenClaw config backup track.
-- `bob-sec#4` supports the Chiefs daily digest workflow.
-- `bob-sec#5` tracks removing legacy app directories and resetting `apps/` to a clean baseline.
-- Daily automations are already live; the chart treats them as ongoing operational lanes over the next week.
-- Dates beyond approved deadlines are manager planning estimates and should be refined as Analyst and Engineer close the next cycle of work.
+## Manager Queue
+- **Now**: `#5`, `#1`, `#2`, `#11`, `#12`
+- **Next**: `#13`, `#3`, `#6`
+- **Standing**: `#4`, `#7`, `#8`, `#9`
