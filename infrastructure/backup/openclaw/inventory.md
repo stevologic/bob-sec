@@ -23,12 +23,9 @@ Observed on 2026-04-13 during issue `bob-sec#3` baseline work:
 | --- | --- | --- |
 | `openclaw.json` | Main OpenClaw configuration and routing baseline | Treat archive as secret-bearing |
 | `cron/jobs.json` | Scheduled jobs and automation cadence | Needed to reconstruct recurring jobs |
-| selected `workspace/` files and directories | Shared operating docs, agent workspace files, and working notes | Includes root workspace docs, `team-shared/`, `scripts/`, `memory/`, and agent workspace directories needed for current operating context |
-| `agents/analyst/agent/models.json` | Analyst model baseline | Non-secret config |
-| `agents/director/agent/models.json` | Director model baseline | Non-secret config |
-| `agents/engineer/agent/models.json` | Engineer model baseline | Non-secret config |
-| `agents/main/agent/models.json` | Main agent model baseline | Non-secret config |
-| `agents/manager/agent/models.json` | Manager model baseline | Non-secret config |
+| selected `workspace/` files and directories | Shared operating docs, agent workspace files, and working notes | Includes root workspace docs, `team-shared/`, `scripts/`, `memory/`, and the full `workspace/analyst`, `workspace/director`, `workspace/manager`, and `workspace/engineer` directories needed for current operating context |
+| per-agent `models.json` files under `agents/*/agent/` | Agent model baselines | Non-secret config |
+| per-agent `sessions/sessions.json` index files | Preserves session index metadata for each agent without backing up full transcripts | Includes `analyst`, `director`, `engineer`, `main`, `manager`, and `default` session indices |
 
 ## Excluded artifacts
 
@@ -36,7 +33,7 @@ Observed on 2026-04-13 during issue `bob-sec#3` baseline work:
 | --- | --- |
 | `agents/*/agent/auth-profiles.json` | Contains auth profile material and API credential references |
 | `agents/*/agent/auth-state.json` | Contains live auth state |
-| `agents/*/sessions/` | Transcript store is large, private, and not required for config reconstruction |
+| `agents/*/sessions/*.jsonl*`, lock/checkpoint/deleted files, and `sessions.json.bak-*` | Transcript store and transient session debris are large, private, or not required for config reconstruction |
 | `delivery-queue/`, `flows/`, `tasks/`, `media/`, `memory/`, `logs/` | Volatile runtime state, caches, or generated data |
 | `devices/`, `identity/` | Pairing and device identity should be re-established deliberately on restore |
 | `openclaw.json.bak*`, `openclaw.json.clobbered*` | Historical spillover copies, not part of the clean baseline |

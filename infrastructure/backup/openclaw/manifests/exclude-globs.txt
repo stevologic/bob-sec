@@ -1,8 +1,12 @@
 # Patterns are evaluated relative to ~/.openclaw
 agents/*/agent/auth-profiles.json
 agents/*/agent/auth-state.json
-agents/*/sessions
-agents/*/sessions/*
+agents/*/sessions/*.jsonl
+agents/*/sessions/*.jsonl.*
+agents/*/sessions/*.lock
+agents/*/sessions/*.checkpoint.*
+agents/*/sessions/*.deleted.*
+agents/*/sessions/sessions.json.bak-*
 delivery-queue
 delivery-queue/*
 devices

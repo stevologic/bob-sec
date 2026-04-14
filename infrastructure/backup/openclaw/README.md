@@ -29,9 +29,10 @@ Create a local archive in a private output directory:
 Included in the baseline:
 - `~/.openclaw/openclaw.json`
 - `~/.openclaw/cron/jobs.json`
-- root workspace operating files plus selected agent workspace directories
+- root workspace operating files plus the full `~/.openclaw/workspace/analyst/`, `director/`, `manager/`, and `engineer/` directories
 - `~/.openclaw/workspace/team-shared/`, `~/.openclaw/workspace/scripts/`, and `~/.openclaw/workspace/memory/`
 - per-agent `models.json` files under `~/.openclaw/agents/*/agent/`
+- per-agent `sessions/sessions.json` index files so each agent directory has restore-relevant session metadata without pulling full transcripts
 
 Explicitly excluded from the repo-tracked baseline:
 - auth profiles and auth state
