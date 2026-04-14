@@ -1,0 +1,50 @@
+[
+  {
+    "id": "director",
+    "name": "Director",
+    "role": "Strategy and approvals",
+    "status": "On track",
+    "progress": 82,
+    "currentTask": "Approving the thin V1 dashboard scope and issue split.",
+    "blocker": "None right now.",
+    "issue": "#11",
+    "updatedAt": "2026-04-13 19:30 MST",
+    "nextMilestone": "Confirm seeded V1 is ready for review."
+  },
+  {
+    "id": "manager",
+    "name": "Manager",
+    "role": "Coordination and issue routing",
+    "status": "At risk",
+    "progress": 74,
+    "currentTask": "Keeping the Gantt, issue queue, and V1 acceptance path aligned.",
+    "blocker": "Deadline pressure and dependency handoffs.",
+    "issue": "#11",
+    "updatedAt": "2026-04-13 19:31 MST",
+    "nextMilestone": "Lock critical path and keep team focused on the seeded V1."
+  },
+  {
+    "id": "analyst",
+    "name": "Analyst",
+    "role": "Seed data and research packet",
+    "status": "On track",
+    "progress": 68,
+    "currentTask": "Preparing the seeded dataset and field mapping for dashboard V1.",
+    "blocker": "None, but timing matters.",
+    "issue": "#12",
+    "updatedAt": "2026-04-13 19:32 MST",
+    "nextMilestone": "Hand off the first usable dataset packet to Engineer."
+  },
+  {
+    "id": "engineer",
+    "name": "Engineer",
+    "role": "V1 implementation",
+    "status": "At risk",
+    "progress": 42,
+    "currentTask": "Scaffolding the read-only dashboard UI with local seeded data and container path.",
+    "blocker": "Very tight delivery window.",
+    "issue": "#13",
+    "updatedAt": "2026-04-13 19:33 MST",
+    "nextMilestone": "Ship the one-page seeded demo and verify the build path."
+  }
+]
