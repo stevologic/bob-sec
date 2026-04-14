@@ -1,50 +1,79 @@
-[
-  {
-    "id": "director",
-    "name": "Director",
-    "role": "Strategy and approvals",
-    "status": "On track",
-    "progress": 82,
-    "currentTask": "Approving the thin V1 dashboard scope and issue split.",
-    "blocker": "None right now.",
-    "issue": "#11",
-    "updatedAt": "2026-04-13 19:30 MST",
-    "nextMilestone": "Confirm seeded V1 is ready for review."
+{
+  "generatedAt": "2026-04-13T21:30:00-07:00",
+  "summary": {
+    "activeWorkers": 4,
+    "attentionNeeded": 2,
+    "blockedWorkers": 0,
+    "lastRefreshedAt": "2026-04-13T21:30:00-07:00"
   },
-  {
-    "id": "manager",
-    "name": "Manager",
-    "role": "Coordination and issue routing",
-    "status": "At risk",
-    "progress": 74,
-    "currentTask": "Keeping the Gantt, issue queue, and V1 acceptance path aligned.",
-    "blocker": "Deadline pressure and dependency handoffs.",
-    "issue": "#11",
-    "updatedAt": "2026-04-13 19:31 MST",
-    "nextMilestone": "Lock critical path and keep team focused on the seeded V1."
-  },
-  {
-    "id": "analyst",
-    "name": "Analyst",
-    "role": "Seed data and research packet",
-    "status": "On track",
-    "progress": 68,
-    "currentTask": "Preparing the seeded dataset and field mapping for dashboard V1.",
-    "blocker": "None, but timing matters.",
-    "issue": "#12",
-    "updatedAt": "2026-04-13 19:32 MST",
-    "nextMilestone": "Hand off the first usable dataset packet to Engineer."
-  },
-  {
-    "id": "engineer",
-    "name": "Engineer",
-    "role": "V1 implementation",
-    "status": "At risk",
-    "progress": 42,
-    "currentTask": "Scaffolding the read-only dashboard UI with local seeded data and container path.",
-    "blocker": "Very tight delivery window.",
-    "issue": "#13",
-    "updatedAt": "2026-04-13 19:33 MST",
-    "nextMilestone": "Ship the one-page seeded demo and verify the build path."
-  }
-]
+  "workers": [
+    {
+      "agent": "Manager",
+      "role": "coordination",
+      "currentIssue": "bob-sec#11",
+      "status": "scope locked",
+      "lastUpdate": "2026-04-13 21:18 MST",
+      "lastCommit": "n/a",
+      "riskFlag": "low",
+      "targetChannel": "#manager-ops",
+      "detail": {
+        "issue": "[Dashboard] V1 ops board spec and acceptance gate",
+        "update": "Scope and acceptance are locked, packet split is in motion.",
+        "commit": "n/a",
+        "blocker": "none",
+        "routingContext": "Manager owns coordination and handoff pressure in #manager-ops."
+      }
+    },
+    {
+      "agent": "Analyst",
+      "role": "research",
+      "currentIssue": "bob-sec#12",
+      "status": "packet drafting",
+      "lastUpdate": "2026-04-13 21:30 MST",
+      "lastCommit": "n/a",
+      "riskFlag": "medium",
+      "targetChannel": "#manager-ops",
+      "detail": {
+        "issue": "[Dashboard] V1 data-source and schema packet",
+        "update": "Source inventory, schema mapping, trust tiers, and seed data are being finalized.",
+        "commit": "n/a",
+        "blocker": "waiting on final schema packet confirmation",
+        "routingContext": "Manager wants the packet in #manager-ops so Engineer can finish #13 without churn."
+      }
+    },
+    {
+      "agent": "Engineer",
+      "role": "build",
+      "currentIssue": "bob-sec#13",
+      "status": "implementing",
+      "lastUpdate": "2026-04-13 21:30 MST",
+      "lastCommit": "40cc8d02",
+      "riskFlag": "medium",
+      "targetChannel": "#engineer-dev",
+      "detail": {
+        "issue": "[Dashboard] V1 read-only ops dashboard implementation",
+        "update": "Scaffold is landed and the remaining fields depend on the final packet.",
+        "commit": "40cc8d02",
+        "blocker": "none after schema packet arrives",
+        "routingContext": "Engineer should finish the table and detail panel once the seed contract is fixed."
+      }
+    },
+    {
+      "agent": "Director",
+      "role": "review",
+      "currentIssue": "bob-sec#10",
+      "status": "decision pending",
+      "lastUpdate": "2026-04-13 21:09 MST",
+      "lastCommit": "n/a",
+      "riskFlag": "low",
+      "targetChannel": "#director-vision",
+      "detail": {
+        "issue": "[Dashboard] clean-slate app plan",
+        "update": "Review lane only, no build blocker.",
+        "commit": "n/a",
+        "blocker": "none",
+        "routingContext": "Director handles higher-order approval and direction, not routine build handoff."
+      }
+    }
+  ]
+}
