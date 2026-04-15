@@ -39,6 +39,8 @@ Advance **Candidate 1** first.
 
 It has the best mix of urgency, repeatability, and prototype simplicity. The KEV tie-in gives it near-term relevance, the exposed-management-surface problem recurs across vendors, and the resulting artifact would be understandable to both practitioners and buyers. Candidates 2 and 3 are still good backlog items, especially if bob-sec wants to lean into ML supply-chain safety or developer-tool hardening later in the cycle.
 
+Refinement note, 2026-04-14 MST: current 2026 trend reporting still supports exposed admin surfaces, CTEM, attack-path validation, and identity-centric detection as the right framing. Keep the first prototype narrowly focused on ingesting inventory or scan results, mapping to high-priority exposed surfaces, and emitting an urgency-ranked triage list.
+
 ## Sources
 - NVD, CVE-2026-1340: https://nvd.nist.gov/vuln/detail/CVE-2026-1340
 - CISA KEV Catalog: https://www.cisa.gov/known-exploited-vulnerabilities-catalog

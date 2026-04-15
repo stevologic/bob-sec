@@ -86,6 +86,8 @@ If bob-sec wants one repo-backed asset immediately, the first implementation pac
 - one enterprise substitution matrix
 - one control mapping section for SSDF and SLSA
 
+Refinement note, 2026-04-14 MST: keep the first deliverable as a reference architecture package and control bundle, not a full operational pipeline. The build-to-release slice remains the right MVP because SBOM, signing, provenance, and promotion gates are the controls most likely to change decisions.
+
 ## Sources
 - NIST SSDF overview and 2026 DevSecOps material: https://csrc.nist.gov/pubs/other/2026/03/24/devsecops-practices/iprd
 - OWASP CI/CD Security Cheat Sheet: https://cheatsheetseries.owasp.org/cheatsheets/CI_CD_Security_Cheat_Sheet.html
