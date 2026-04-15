@@ -1,0 +1,17 @@
+{
+  "openclaw": {
+    "endpoint": "ws://127.0.0.1:18789",
+    "label": "OpenClaw telemetry",
+    "status": "client-side fallback",
+    "fallback": "Seeded worker snapshot until a safe live socket bridge is wired",
+    "note": "Browser access stays client-side only, so live telemetry should be opt-in and connection-safe."
+  },
+  "github": {
+    "owner": "stevologic",
+    "repo": "bob-sec",
+    "label": "GitHub issues",
+    "status": "client-side fallback",
+    "fallback": "Seeded issue snapshot until a safe read path exists",
+    "note": "Do not hardcode a powerful token into the browser for private repo access."
+  }
+}
