@@ -19,6 +19,7 @@ Combine live OpenClaw telemetry and GitHub issue state into one browser-based da
 - configuration: endpoint should be configurable in the site
 - access pattern: client side only
 - controls: dedicated refresh or reconnect control and connection status indicator
+- note: treat this as a protocol/auth handshake spike, not a simple socket feed
 
 ### 2. GitHub issues for the home repo
 - source: GitHub Issues for the primary repo
@@ -26,6 +27,7 @@ Combine live OpenClaw telemetry and GitHub issue state into one browser-based da
 - configuration: repo owner and repo name should be configurable in the site
 - access pattern: client side only
 - controls: dedicated refresh button and freshness indicator
+- note: GitHub public issues API is the first real live source if it is safe to consume client side
 
 ## Important Constraint
 Client-side-only GitHub access is acceptable only if the issue data is public or otherwise exposed safely without leaking sensitive credentials into the browser.
@@ -48,6 +50,8 @@ The sprite board should show:
 - queued work ahead
 - blockers or warning state
 - completion or movement cues
+
+Do not spend the next cycle polishing the sprite layer before the live-state contract is honest.
 
 ## Sprite Rules
 - sprite positions should map to real workflow stages
@@ -89,10 +93,10 @@ V2 is not complete until it includes:
 Manager should turn this into documented execution, not immediate sprawl.
 
 ### First Manager questions
-1. What exact OpenClaw telemetry is available over the WebSocket on `18789`?
-2. What issue fields from GitHub can be safely consumed client side?
-3. What is the exact stage mapping between telemetry and issue data?
-4. What is the smallest V2 slice that proves value without overbuilding?
+1. Can the public GitHub issues API give us honest live state first?
+2. What exact OpenClaw handshake or protocol shape is required on `18789`?
+3. What issue fields from GitHub can be safely consumed client side?
+4. What is the smallest V2 slice that proves value without overbuilding, without visual polish ahead of truth?
 
 ### Required issue split
 - Analyst issue: telemetry and GitHub field research, trust levels, and stage mapping
