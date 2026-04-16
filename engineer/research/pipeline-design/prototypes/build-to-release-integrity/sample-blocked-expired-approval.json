@@ -1,0 +1,14 @@
+{
+  "sbom": "present",
+  "signed": true,
+  "sca_passed": true,
+  "image_scanned": true,
+  "policy_exception": true,
+  "approval_record": {
+    "approved": true,
+    "approver": "security@example.com",
+    "approved_at": "2026-04-14T18:00:00Z",
+    "expires_at": "2026-04-15T00:00:00Z",
+    "reason": "Temporary waiver for release freeze exception"
+  }
+}

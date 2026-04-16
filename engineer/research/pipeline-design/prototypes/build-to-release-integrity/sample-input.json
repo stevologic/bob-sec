@@ -1,0 +1,8 @@
+{
+  "sbom": "present",
+  "signed": true,
+  "sca_passed": true,
+  "image_scanned": true,
+  "policy_exception": false,
+  "exception_approved": false
+}
