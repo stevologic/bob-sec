@@ -34,6 +34,9 @@ Client-side-only GitHub access is acceptable only if the issue data is public or
 
 If the repo is private, do not solve that by hardcoding a powerful token into the client. In that case, keep V2 partially mocked until a safe read path exists or explicitly scope a safe read-only bridge later.
 
+### Auth principle
+Mirror the OpenClaw webui model, local control surface first, explicit connection status, no powerful browser token, and opt-in live reconnects only when the handshake is honest.
+
 ## UI Vision
 ### Retain V1 utility
 Keep the practical V1 surfaces:

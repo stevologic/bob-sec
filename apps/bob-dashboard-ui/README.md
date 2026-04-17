@@ -32,6 +32,7 @@ If either source is unavailable, the dashboard keeps working from the seeded loc
 - OpenClaw uses a browser-safe WebSocket reconnect path against `ws://127.0.0.1:18789`.
 - GitHub mirrors the public issues feed without embedding a powerful browser token.
 - The source cards report the current live/fallback state and last sync time.
+- Auth principle: follow the OpenClaw webui pattern, local control surface first, explicit status, no secret in the browser, and honest fallback when live handshakes are unavailable.
 
 ## Design notes
 
