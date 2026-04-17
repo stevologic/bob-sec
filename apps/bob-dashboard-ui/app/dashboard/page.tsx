@@ -1,6 +1,9 @@
+// Dashboard V3: snapshot-first (no live claims until contract proven)
+// Reads from local snapshot data; API routes available for external fetch
+
 import Link from "next/link";
-import { dashboardSnapshot } from "@/lib/dashboard-snapshot";
-import type { GitHubIssue, OpenClawError, AgentRun } from "@/lib/dashboard-types";
+import { openclawRunsSnapshot } from "@/lib/dashboard-snapshot";
+import type { GitHubIssue, OpenClawError } from "@/lib/dashboard-types";
 
 const statusTone: Record<string, string> = {
   snapshot: "bg-slate-500/15 text-slate-200 ring-slate-400/25",
@@ -88,7 +91,7 @@ function ErrorCard({ error }: { error: OpenClawError }) {
 }
 
 export default function DashboardPage() {
-  const snapshot = dashboardSnapshot;
+  const agentRuns = openclawRunsSnapshot;
 
   return (
     <main className="min-h-screen bg-slate-950 px-4 py-6 text-slate-100 sm:px-6 lg:px-8">
