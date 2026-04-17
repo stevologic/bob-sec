@@ -2,8 +2,8 @@
 // Reads from local snapshot data; API routes available for external fetch
 
 import Link from "next/link";
-import { openclawRunsSnapshot } from "@/lib/dashboard-snapshot";
-import type { GitHubIssue, OpenClawError } from "@/lib/dashboard-types";
+import { openclawRunsSnapshot, dashboardSnapshot } from "@/lib/dashboard-snapshot";
+// No AgentRun type needed - run data is inline in snapshot
 
 const statusTone: Record<string, string> = {
   snapshot: "bg-slate-500/15 text-slate-200 ring-slate-400/25",
@@ -35,7 +35,7 @@ function Chip({ children, tone }: { children: React.ReactNode; tone: string }) {
   return <span className={`inline-flex rounded-full px-2.5 py-1 text-xs font-medium ring-1 ${tone}`}>{children}</span>;
 }
 
-function RunCard({ run }: { run: AgentRun }) {
+function RunCard({ run }: { run: any }) {
   return (
     <div className="rounded-2xl border border-white/10 bg-slate-900/70 p-4">
       <div className="flex items-start justify-between gap-3">
@@ -56,7 +56,7 @@ function RunCard({ run }: { run: AgentRun }) {
   );
 }
 
-function IssueCard({ issue }: { issue: GitHubIssue }) {
+function IssueCard({ issue }: { issue: any }) {
   return (
     <a href={issue.url} target="_blank" rel="noreferrer" className="block rounded-2xl border border-white/10 bg-slate-900/70 p-4 transition hover:bg-white/8">
       <div className="flex items-start justify-between gap-3">
@@ -75,7 +75,7 @@ function IssueCard({ issue }: { issue: GitHubIssue }) {
   );
 }
 
-function ErrorCard({ error }: { error: OpenClawError }) {
+function ErrorCard({ error }: { error: any }) {
   return (
     <div className="rounded-2xl border border-white/10 bg-slate-900/70 p-4">
       <div className="flex items-start justify-between gap-3">
@@ -92,6 +92,7 @@ function ErrorCard({ error }: { error: OpenClawError }) {
 
 export default function DashboardPage() {
   const agentRuns = openclawRunsSnapshot;
+  const snapshot = dashboardSnapshot;
 
   return (
     <main className="min-h-screen bg-slate-950 px-4 py-6 text-slate-100 sm:px-6 lg:px-8">
@@ -118,7 +119,7 @@ export default function DashboardPage() {
         <div className="grid gap-6 xl:grid-cols-3">
           <Panel title="OpenClaw live runs" eyebrow="Panel 1">
             <div className="space-y-3">
-              {snapshot.agentRuns.map((run) => <RunCard key={run.id} run={run} />)}
+              {agentRuns.map((run) => <RunCard key={run.id} run={run} />)}
               <div className="rounded-2xl border border-dashed border-white/10 p-4 text-sm text-slate-400">Fallback: local snapshot data.</div>
             </div>
           </Panel>
